@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+main {
+    height: 100%;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 48px;
+    /* background: brown; */
+}
+
+/*------ Diseño grid formulario ------*/
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.formulario__label {
+    padding: 8px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input {
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    font-size: 18px;
+    background: #ffff;
+    
+}
+
+.formulario__input:focus{
+    box-shadow: 0 0 0 3px rgb(148, 162, 207);
+}
+
+.formulario__validacion {
+    font-size: 19px;
+    position: absolute;
+    right: 55px;
+    bottom: 22px;
+    opacity: 0;
+}
+
+.formulario__error {
+    display: none;
+    width: 90%;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+/*------ Terminos y condiciones ------*/
+
+.formulario__grupo-condiciones {
+    grid-column: span 2;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/*------ Aviso ------*/
+
+.formulario__aviso {
+    display: none;
+    grid-column: span 2;
+    font-size: 19px;
+    padding: 12px;
+    background: rgb(175, 53, 53);
+    width: 80%;
+}
+
+.formulario__aviso-icon b{
+    margin-left: 15px;
+}
+
+/*------ Boton de envio ------*/
+
+.formulario__grupo-btn {
+    grid-column: span 2;
+    width: 95%;
+    text-align: center;
+}
+
+.submit {
+    width: 30%;
+    height: 45px;
+    font-size: 17px;
+    background: #000;
+    line-height: 45px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.enviado {
+    display: none;
+    color: #05af05;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/*Javascript Elements*/
+
+.error {
+    color: #ff0000;
+    border: #ff0000;
+    outline-color: #ff0000;
+}
+
+.error:focus {
+    box-shadow: none;
+}
+
+.error-aviso {
+    display: block;
+    opacity: 1;
+    color: #ff0000;
+}
+
+.valido {
+    opacity: 1;
+    color: #05af05;
+}
+
+.display{
+    display: block;
+    color: #000;
+}
+
+.display2{
+    display: block;
+}
+
+/*---------------------------*/
+/*-----Diseño Responsive-----*/
+/*---------------------------*/
+
+@media screen and (max-width: 850px) {
+    body {
+        height: 100%;
+    }
+
+    main {
+        width: 90%;
+    }
+    
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario__input {
+        width: 100%;
+    }
+
+    .formulario__validacion {
+        right: 10px;
+    }
+
+    .submit {
+        width: 70%;
+    }
+}

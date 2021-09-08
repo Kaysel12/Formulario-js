@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/20d68f0406.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <main>
+        <form class="formulario" action="#" method="get">
+
+            <!-- Grupo: Nombre -->
+            <div class="formulario__grupo" id="grupo-nombre">
+                <label for="nombre" class="formulario__label">Nombre</label>
+                <div class="formulario__grupo-input ">
+                    <input type="text" name="nombre" id="nombre" class="formulario__input">
+                    <i class="formulario__validacion far fa-times-circle" id="validacion-nombre"></i>
+                </div>
+                <p class="formulario__error formulario__error-nombre">¡ERROR! Este campo solo puede llevar letras, espacios y asentos</p>
+            </div>
+            
+            <!-- Grupo: Usuario -->
+            <div class="formulario__grupo" id="grupo-usuario">
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" name="usuario" id="usuario" class="formulario__input">
+                    <i class="formulario__validacion far fa-times-circle" id="validacion-usuario"></i>
+                </div>
+                <p class="formulario__error formulario__error-usuario">¡ERROR! Este campo solo puede llevar letras, numeros, guion y gion bajo</p>
+            </div>
+
+            <!-- Grupo: Contraseña -->
+            <div class="formulario__grupo" id="grupo-password">
+                <label for="password" class="formulario__label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" name="password" id="password" class="formulario__input">
+                    <i class="formulario__validacion far fa-times-circle" id="validacion-password"></i>
+                </div>
+                <p class="formulario__error formulario__error-password">¡ERROR! Este campo puede llevar desde 4 a 12 digitos</p>
+            </div>
+
+            <!-- Grupo: Repetir Contraseña -->
+            <div class="formulario__grupo" id="grupo-password2">
+                <label for="password2" class="formulario__label">Repetir contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" name="password2" id="password2" class="formulario__input">
+                    <i class="formulario__validacion far fa-times-circle" id="validacion-password2"></i>
+                </div>
+                <p class="formulario__error formulario__error-password2">¡ERROR! Debe ser igual a la contraseña anterior</p>
+            </div>
+
+            <!-- Grupo: Correo -->
+            <div class="formulario__grupo" id="grupo-correo">
+                <label for="correo" class="formulario__label">Correo Electronico</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" name="correo" id="correo" class="formulario__input">
+                    <i class="formulario__validacion far fa-times-circle" id="validacion-correo"></i>
+                </div>
+                <p class="formulario__error formulario__error-correo">¡ERROR! Este campo solo puede llevar letras, espacios y asentos</p>
+            </div>
+            
+            <!-- Grupo: Telefono -->
+            <div class="formulario__grupo" id="grupo-telefono">
+                <label for="telefono" class="formulario__label">Telefono</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" name="telefono" id="telefono" class="formulario__input">
+                    <i class="formulario__validacion far fa-times-circle" id="validacion-telefono"></i>
+                </div>
+                <p class="formulario__error formulario__error-telefono">¡ERROR! Dijite correctamente el correo</p>
+            </div>
+
+            <!-- Grupo: terminos y condiciones -->
+            <div class="formulario__grupo-condiciones" id="grupo__checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" class="formulario__input-checkbox">
+                <label for="checkbox" class="formulario__label-checkbox">Acepta los terminos y condiciones
+                </label>
+            </div>
+
+            <!-- aviso -->
+            <div class="formulario__aviso">
+                <i class="formulario__aviso-icon fas fa-exclamation-triangle"><b>Error :</b> Complete todos los espacios correctamente</i>
+            </div>
+
+            <!-- boton -->
+            <div class="formulario__grupo-btn">
+                <button type="submit" class="submit">Enviar</button>
+                <p class="enviado">Enviado exitosamente</p>
+            </div>
+        </form>
+
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
